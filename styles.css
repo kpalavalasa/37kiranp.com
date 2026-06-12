@@ -32,6 +32,8 @@
   --t-scanline: rgba(0, 0, 0, 0.03);
   --t-inset: rgba(255, 255, 255, 0.03);
   --t-nav-bg: rgba(10, 14, 20, 0.9);
+  --banner-height: 2.25rem;
+  --t-banner-bg: rgba(210, 153, 34, 0.12);
 }
 
 [data-theme="light"] {
@@ -63,6 +65,8 @@
   --t-scanline: rgba(0, 0, 0, 0.015);
   --t-inset: rgba(255, 255, 255, 0.8);
   --t-nav-bg: rgba(238, 241, 244, 0.92);
+  --banner-height: 2.25rem;
+  --t-banner-bg: rgba(154, 103, 0, 0.1);
 }
 
 /* ==========================================================================
@@ -143,13 +147,35 @@ textarea {
 }
 
 /* ==========================================================================
+   Coming soon banner
+   ========================================================================== */
+
+.coming-soon-banner {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: var(--banner-height);
+  padding-inline: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: var(--t-banner-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--t-amber) 35%, var(--t-border));
+  backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
    Navbar
    ========================================================================== */
 
 #navbar {
   position: fixed;
   inset-inline: 0;
-  top: 0;
+  top: var(--banner-height);
   z-index: 50;
   transition: background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s;
 }
@@ -547,11 +573,11 @@ nav ul {
 main.site-main {
   max-width: 64rem;
   margin-inline: auto;
-  padding: 5rem 1rem 3rem;
+  padding: calc(5rem + var(--banner-height)) 1rem 3rem;
 }
 
 @media (min-width: 640px) {
-  main.site-main { padding: 6rem 1.5rem 3rem; }
+  main.site-main { padding: calc(6rem + var(--banner-height)) 1.5rem 3rem; }
   .sm\:text-base { font-size: 1rem; }
   .sm\:text-xl { font-size: 1.25rem; }
   .sm\:text-4xl { font-size: 2.25rem; }
