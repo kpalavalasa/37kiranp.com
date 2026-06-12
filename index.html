@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kiran — Software Developer focused on AI tools and data systems. Based in North Carolina." />
+  <meta name="author" content="Kiran" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="canonical" href="https://37kiranp.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://37kiranp.com/" />
+  <meta property="og:title" content="Kiran | Software Developer" />
+  <meta property="og:description" content="Building AI tools and data systems. Software developer based in North Carolina." />
+  <meta property="og:site_name" content="37kiranp" />
+
+  <title>kiran@37kiranp:~$ whoami</title>
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header id="navbar">
+    <nav class="site-container flex items-center justify-between py-3" aria-label="Main navigation">
+      <a href="#home" class="text-sm">
+        <span class="t-green">kiran</span><span class="t-dim">@</span><span class="t-cyan">37kiranp</span><span class="t-dim">:~$</span>
+      </a>
+
+      <div class="nav-actions">
+        <ul class="hidden md:flex gap-1">
+          <li><a href="#home" class="nav-link">./home</a></li>
+          <li><a href="#about" class="nav-link">./about</a></li>
+          <li><a href="#projects" class="nav-link">./projects</a></li>
+          <li><a href="#skills" class="nav-link">./skills</a></li>
+          <li><a href="#contact" class="nav-link">./contact</a></li>
+          <li><span class="nav-link cursor-not-allowed t-muted" title="Coming soon">./blog <span class="t-amber">[soon]</span></span></li>
+        </ul>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+          <span class="icon-light">[light]</span>
+          <span class="icon-dark">[dark]</span>
+        </button>
+
+        <button id="menu-btn" class="menu-btn md:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span id="icon-open">[menu]</span>
+          <span id="icon-close" class="hidden">[close]</span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden is-hidden md:hidden" role="dialog">
+      <ul class="site-container flex flex-col gap-1 py-3 text-xs">
+        <li><a href="#home" class="nav-link block">./home</a></li>
+        <li><a href="#about" class="nav-link block">./about</a></li>
+        <li><a href="#projects" class="nav-link block">./projects</a></li>
+        <li><a href="#skills" class="nav-link block">./skills</a></li>
+        <li><a href="#contact" class="nav-link block">./contact</a></li>
+        <li><span class="nav-link block t-muted">./blog <span class="t-amber">[coming soon]</span></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- HERO -->
+    <section id="home" class="term-window">
+      <div class="term-bar">
+        <span class="term-dot term-dot-red"></span>
+        <span class="term-dot term-dot-amber"></span>
+        <span class="term-dot term-dot-green"></span>
+        <span class="ml-2 t-muted">kiran@37kiranp — bash — 80×24</span>
+      </div>
+
+      <div class="term-body term-body-lg relative">
+        <p class="text-xs t-muted">Last login: <span id="login-time"></span> from 37kiranp.com</p>
+
+        <pre class="mt-6 hidden sm:block text-xs leading-tight t-green" style="opacity:0.7" aria-hidden="true">
+  _  ___                     
+ | |/ (_)_ __ __ _ _ __  
+ | ' /| | '__/ _` | '_ `\ 
+ | . \| | | | (_| | | | |
+ |_|\_\_|_|  \__,_|_| |_|
+        </pre>
+
+        <div class="mt-6 sm:mt-4">
+          <p class="text-sm sm:text-base">
+            <span class="t-green">kiran@37kiranp</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$</span>
+            <span class="t-text"> whoami</span>
+          </p>
+          <h1 class="mt-2 text-2xl sm:text-4xl font-bold t-green">Kiran</h1>
+          <p class="mt-1 text-sm t-dim">Software Developer · AI tools &amp; data systems</p>
+        </div>
+
+        <div class="mt-5">
+          <p class="text-sm">
+            <span class="t-green">kiran@37kiranp</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$</span>
+            <span class="t-text"> cat ./tagline.txt</span>
+          </p>
+          <p class="mt-2 max-w-xl text-sm leading-relaxed t-dim">
+            Building <span class="t-cyan">AI tools</span> and <span class="t-cyan">data systems</span>
+            from <span class="t-amber">North Carolina</span> — with the discipline of a
+            <span class="t-purple">long-distance runner</span>.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="btn-primary"><span class="t-dim">$</span> ls ./projects</a>
+          <a href="#contact" class="btn-secondary"><span class="t-dim">$</span> ./contact.sh</a>
+        </div>
+
+        <div class="mt-8 hidden sm:absolute sm:right-8 sm:top-8 sm:mt-0 sm:block">
+          <div class="profile-frame">
+            <div class="profile-placeholder">
+              <!-- <img src="profile.jpg" alt="Kiran" style="width:100%;height:100%;object-fit:cover" /> -->
+              <span class="text-2xl t-green" style="opacity:0.4">[</span>
+              <span class="text-[10px]">profile.jpg</span>
+              <span class="text-2xl t-green" style="opacity:0.4">]</span>
+            </div>
+            <p class="mt-1 text-[10px] t-muted">chmod 644 profile.jpg</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="term-window">
+      <div class="term-bar">
+        <span><span class="t-green">$</span> cat about.md</span>
+      </div>
+      <div class="term-body term-body-lg">
+        <h2 class="text-lg sm:text-xl font-bold t-cyan"># Building systems that think and scale</h2>
+
+        <div class="mt-6 grid gap-8 lg:grid-cols-5">
+          <div class="lg:col-span-3 space-y-4 text-sm leading-relaxed t-dim">
+            <p>
+              I'm a software developer based in <span class="t-amber">North Carolina</span>, focused on
+              designing and shipping AI-powered tools and robust data pipelines. I enjoy turning messy, real-world
+              problems into clean, maintainable systems — whether that's an LLM workflow, a streaming ETL job, or an
+              internal developer platform.
+            </p>
+            <p>
+              Off the keyboard, I'm a <span class="t-purple">long-distance runner</span>. The patience, pacing,
+              and consistency that carry me through miles on the road are the same habits I bring to engineering:
+              iterate steadily, measure what matters, and finish what you start.
+            </p>
+          </div>
+
+          <div class="lg:col-span-2">
+            <pre class="code-block"><code><span class="t-purple">const</span> <span class="t-cyan">kiran</span> = {
+  <span class="t-green">location</span>: <span class="t-amber">"North Carolina, USA"</span>,
+  <span class="t-green">focus</span>: [
+    <span class="t-amber">"AI tools"</span>,
+    <span class="t-amber">"Data systems"</span>,
+    <span class="t-amber">"Backend eng"</span>
+  ],
+  <span class="t-green">hobby</span>: <span class="t-amber">"long-distance running"</span>,
+  <span class="t-green">status</span>: <span class="t-amber">"open to opportunities"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="term-window">
+      <div class="term-bar term-bar-between">
+        <span><span class="t-green">$</span> ls -la ./projects/</span>
+        <span class="text-[10px] t-muted">6 dirs</span>
+      </div>
+      <div class="term-body term-body-lg">
+        <p class="mb-6 text-xs t-muted"># Replace placeholders with your real repos and demos</p>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  ai-agent-orchestrator/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">AI Agent Orchestrator</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Multi-agent workflow engine with tool routing, memory, and observability for production LLM applications.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">FastAPI</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./demo</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  streaming-pipeline/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">Streaming Data Pipeline</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Event-driven ETL pipeline ingesting, transforming, and loading high-volume telemetry into a warehouse.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">Kafka</span><span class="tag">dbt</span><span class="tag">Snowflake</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./case-study</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  llm-eval-dashboard/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">LLM Evaluation Dashboard</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Side-by-side model comparison UI with automated scoring, human feedback loops, and regression tracking.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">OpenAI</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./demo</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  vector-search-api/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">Vector Search API</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Semantic search service with embedding pipelines, hybrid retrieval, and sub-100ms query latency.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">pgvector</span><span class="tag">RAG</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./api-docs</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  analytics-platform/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">Analytics Platform</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Self-serve analytics layer with dbt models, metric definitions, and scheduled report generation.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">SQL</span><span class="tag">Airflow</span><span class="tag">BigQuery</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./overview</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+          <article class="project-card">
+            <p class="text-[10px] t-muted">drwxr-xr-x  6 kiran  dev  4096  dev-cli-toolkit/</p>
+            <h3 class="mt-2 text-sm font-bold t-green">Dev CLI Toolkit</h3>
+            <p class="mt-2 text-xs leading-relaxed t-dim">Open-source CLI for scaffolding services, running local stacks, and automating repetitive dev workflows.</p>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="tag">Go</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div>
+            <div class="mt-4 flex gap-4 text-xs"><a href="#" class="t-green hover:underline">./readme</a><a href="#" class="t-dim project-link">github →</a></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="term-window">
+      <div class="term-bar"><span><span class="t-green">$</span> dpkg -l | grep skills</span></div>
+      <div class="term-body term-body-lg">
+        <p class="text-xs t-dim"># Tools and technologies I reach for most often</p>
+
+        <div class="mt-6 space-y-6">
+          <div>
+            <p class="mb-3 text-xs t-amber">[languages]</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Python</span><span class="skill-pill">TypeScript</span><span class="skill-pill">SQL</span><span class="skill-pill">Go</span><span class="skill-pill">Bash</span>
+            </div>
+          </div>
+          <div>
+            <p class="mb-3 text-xs t-amber">[ai &amp; data]</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill skill-pill-accent">LLMs &amp; RAG</span><span class="skill-pill skill-pill-accent">LangChain</span><span class="skill-pill skill-pill-accent">Vector DBs</span><span class="skill-pill skill-pill-accent">dbt</span><span class="skill-pill skill-pill-accent">Apache Kafka</span><span class="skill-pill skill-pill-accent">Airflow</span><span class="skill-pill skill-pill-accent">Spark</span>
+            </div>
+          </div>
+          <div>
+            <p class="mb-3 text-xs t-amber">[infrastructure]</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">AWS</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">FastAPI</span><span class="skill-pill">React</span><span class="skill-pill">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="term-window">
+      <div class="term-bar"><span><span class="t-green">$</span> ./contact.sh --interactive</span></div>
+      <div class="term-body term-body-lg">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <h2 class="text-lg font-bold t-cyan">Let's connect</h2>
+            <p class="mt-3 text-sm leading-relaxed t-dim">Have a project in mind, an interesting role, or just want to talk AI and data? I'd love to hear from you.</p>
+            <div class="mt-6">
+              <a href="mailto:hello@37kiranp.com" class="email-link"><span class="t-green">→</span> hello@37kiranp.com</a>
+            </div>
+            <div class="mt-6 flex gap-3">
+              <a href="https://github.com/37kiranp" target="_blank" rel="noopener noreferrer" class="social-link">github</a>
+              <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link social-link-cyan">linkedin</a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-link social-link-purple">x</a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="project-card" novalidate>
+            <p class="mb-4 text-xs t-muted"># Fill in the fields below, then hit send</p>
+            <div class="space-y-4">
+              <div>
+                <label for="name" class="text-xs t-amber">--name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="input-field" placeholder="your_name" />
+              </div>
+              <div>
+                <label for="email" class="text-xs t-amber">--email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="input-field" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="message" class="text-xs t-amber">--message</label>
+                <textarea id="message" name="message" required rows="4" class="input-field resize-y" placeholder="your message here..."></textarea>
+              </div>
+              <p id="form-error" class="hidden text-xs t-red" role="alert"></p>
+              <p id="form-success" class="hidden text-xs t-green" role="status"></p>
+              <button type="submit" class="btn-primary w-full sm:w-auto">$ mail -s "inquiry" hello@37kiranp.com</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p><span class="t-dim">exit 0</span> · &copy; <span id="year"></span> <a href="https://37kiranp.com">37kiranp.com</a></p>
+      <p class="t-muted">built with html + css + bash vibes</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
